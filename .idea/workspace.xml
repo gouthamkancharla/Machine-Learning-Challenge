@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76923bc7-5d38-4d38-8a26-6286ebe0e5c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/model_exploration/gmm.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model_exploration/kmeans.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/decision_tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/decision_tree.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feature_engineering.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/feature_engineering.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/knn.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/knn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/neural_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/neural_network.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
