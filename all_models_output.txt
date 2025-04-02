@@ -363,3 +363,376 @@ ImportError: cannot import name 'Any' from partially initialized module 'typing'
 
 --- Running: .venv/lib/python3.10/site-packages/keras/__init__.py ---
 Executing python3 in directory './.venv/lib/python3.10/site-packages/keras' for script '__init__.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/__init__.py", line 61, in <module>
+    __path__.append(os.path.join(os.path.dirname(__file__), "api"))  # noqa: F405
+NameError: name '__path__' is not defined. Did you mean: '__name__'?
+--- Finished: .venv/lib/python3.10/site-packages/keras/__init__.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/activations/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/activations' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/activations/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/visualization/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/visualization' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/visualization/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/tree/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/tree' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/tree/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/metrics/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/metrics' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/metrics/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/losses/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/losses' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/losses/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/wrappers/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/wrappers' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/wrappers/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/layers/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/layers' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/layers/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/constraints/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/constraints' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/constraints/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/config/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/config' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/config/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/callbacks/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/callbacks' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/callbacks/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/quantizers/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/quantizers' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/quantizers/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/mnist/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/mnist' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/mnist/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/boston_housing/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/boston_housing' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/boston_housing/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/fashion_mnist/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/fashion_mnist' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/fashion_mnist/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/reuters/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/reuters' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/reuters/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/cifar100/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/cifar100' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/cifar100/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/imdb/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/imdb' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/imdb/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/california_housing/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/california_housing' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/california_housing/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/cifar10/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/cifar10' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/datasets/cifar10/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/distribution/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/distribution' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/distribution/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/mixed_precision/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/mixed_precision' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/mixed_precision/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/legacy/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/legacy' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/legacy/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/legacy/saving/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/legacy/saving' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/legacy/saving/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras' for script '__init__.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/__init__.py", line 7, in <module>
+    from keras.api import activations
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/__init__.py", line 2, in <module>
+    from keras.api import DTypePolicy
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/api/__init__.py", line 8, in <module>
+    from keras.api import activations
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/api/activations/__init__.py", line 7, in <module>
+    from keras.src.activations import deserialize
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/__init__.py", line 1, in <module>
+    from keras.src import activations
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/activations/__init__.py", line 3, in <module>
+    from keras.src.activations.activations import celu
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/activations/activations.py", line 1, in <module>
+    from keras.src import backend
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/backend/__init__.py", line 10, in <module>
+    from keras.src.backend.common.dtypes import result_type
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/backend/common/__init__.py", line 2, in <module>
+    from keras.src.backend.common.dtypes import result_type
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/backend/common/dtypes.py", line 5, in <module>
+    from keras.src.backend.common.variables import standardize_dtype
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/backend/common/variables.py", line 11, in <module>
+    from keras.src.utils.module_utils import tensorflow as tf
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/utils/__init__.py", line 1, in <module>
+    from keras.src.utils.audio_dataset_utils import audio_dataset_from_directory
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/utils/audio_dataset_utils.py", line 4, in <module>
+    from keras.src.utils import dataset_utils
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/utils/dataset_utils.py", line 5, in <module>
+    from multiprocessing.pool import ThreadPool
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/multiprocessing/pool.py", line 30, in <module>
+    from .connection import wait
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/multiprocessing/connection.py", line 18, in <module>
+    import tempfile
+  File "/Library/Frameworks/Python.framework/Versions/3.10/lib/python3.10/tempfile.py", line 45, in <module>
+    from random import Random as _Random
+ImportError: cannot import name 'Random' from 'random' (/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/random/__init__.py)
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/__init__.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/utils/bounding_boxes/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/utils/bounding_boxes' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/utils/bounding_boxes/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/utils/legacy/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/utils/legacy' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/utils/legacy/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/utils/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/utils' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/utils/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/backend/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/backend' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/backend/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/models/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/models' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/models/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/optimizers/legacy/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/optimizers/legacy' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/optimizers/legacy/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/optimizers/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/optimizers' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/optimizers/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/optimizers/schedules/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/optimizers/schedules' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/optimizers/schedules/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/regularizers/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/regularizers' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/regularizers/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/dtype_policies/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/dtype_policies' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/dtype_policies/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/resnet50/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/resnet50' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/resnet50/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/densenet/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/densenet' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/densenet/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/mobilenet/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/mobilenet' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/mobilenet/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/convnext/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/convnext' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/convnext/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/imagenet_utils/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/imagenet_utils' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/imagenet_utils/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/resnet/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/resnet' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/resnet/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/efficientnet_v2/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/efficientnet_v2' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/efficientnet_v2/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/inception_v3/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/inception_v3' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/inception_v3/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/efficientnet/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/efficientnet' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/efficientnet/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/vgg16/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/vgg16' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/vgg16/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/mobilenet_v2/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/mobilenet_v2' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/mobilenet_v2/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/vgg19/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/vgg19' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/vgg19/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/mobilenet_v3/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/mobilenet_v3' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/mobilenet_v3/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/resnet_v2/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/resnet_v2' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/resnet_v2/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/xception/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/xception' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/xception/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/nasnet/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/nasnet' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/nasnet/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/inception_resnet_v2/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/inception_resnet_v2' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/applications/inception_resnet_v2/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/ops/linalg/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/ops/linalg' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/ops/linalg/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/ops/nn/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/ops/nn' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/ops/nn/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/ops/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/ops' for script '__init__.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/ops/__init__.py", line 7, in <module>
+    from keras.api.ops import image
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/__init__.py", line 2, in <module>
+    from keras.api import DTypePolicy
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/api/__init__.py", line 8, in <module>
+    from keras.api import activations
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/api/activations/__init__.py", line 7, in <module>
+    from keras.src.activations import deserialize
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/__init__.py", line 1, in <module>
+    from keras.src import activations
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/activations/__init__.py", line 3, in <module>
+    from keras.src.activations.activations import celu
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/activations/activations.py", line 1, in <module>
+    from keras.src import backend
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/backend/__init__.py", line 10, in <module>
+    from keras.src.backend.common.dtypes import result_type
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/backend/common/__init__.py", line 2, in <module>
+    from keras.src.backend.common.dtypes import result_type
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/backend/common/dtypes.py", line 5, in <module>
+    from keras.src.backend.common.variables import standardize_dtype
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/backend/common/variables.py", line 1, in <module>
+    import numpy as np
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/ops/numpy/__init__.py", line 7, in <module>
+    from keras.src.ops.numpy import abs
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/ops/__init__.py", line 5, in <module>
+    from keras.src.backend import cast
+ImportError: cannot import name 'cast' from partially initialized module 'keras.src.backend' (most likely due to a circular import) (/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/backend/__init__.py)
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/ops/__init__.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/ops/numpy/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/ops/numpy' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/ops/numpy/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/ops/image/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/ops/image' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/ops/image/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/preprocessing/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/preprocessing' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/preprocessing/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/preprocessing/image/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/preprocessing/image' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/preprocessing/image/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/_tf_keras/keras/preprocessing/text/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/preprocessing/text' for script '__init__.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/_tf_keras/keras/preprocessing/text/__init__.py", line 7, in <module>
+    from keras.src.legacy.preprocessing.text import Tokenizer
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/__init__.py", line 2, in <module>
+    from keras.api import DTypePolicy
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/api/__init__.py", line 8, in <module>
+    from keras.api import activations
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/api/activations/__init__.py", line 7, in <module>
+    from keras.src.activations import deserialize
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/__init__.py", line 1, in <module>
+    from keras.src import activations
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/activations/__init__.py", line 3, in <module>
+    from keras.src.activations.activations import celu
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/activations/activations.py", line 1, in <module>
+    from keras.src import backend
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/backend/__init__.py", line 10, in <module>
+    from keras.src.backend.common.dtypes import result_type
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/backend/common/__init__.py", line 2, in <module>
+    from keras.src.backend.common.dtypes import result_type
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/backend/common/dtypes.py", line 5, in <module>
+    from keras.src.backend.common.variables import standardize_dtype
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/backend/common/variables.py", line 11, in <module>
+    from keras.src.utils.module_utils import tensorflow as tf
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/utils/__init__.py", line 1, in <module>
+    from keras.src.utils.audio_dataset_utils import audio_dataset_from_directory
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/utils/audio_dataset_utils.py", line 4, in <module>
+    from keras.src.utils import dataset_utils
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/utils/dataset_utils.py", line 9, in <module>
+    from keras.src import tree
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/tree/__init__.py", line 1, in <module>
+    from keras.src.tree.tree_api import assert_same_paths
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/tree/tree_api.py", line 8, in <module>
+    from keras.src.tree import optree_impl as tree_impl
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/keras/src/tree/optree_impl.py", line 13, in <module>
+    from tensorflow.python.trackable.data_structures import ListWrapper
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/tensorflow/__init__.py", line 49, in <module>
+    from tensorflow._api.v2 import __internal__
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/tensorflow/_api/v2/__internal__/__init__.py", line 13, in <module>
+    from tensorflow._api.v2.__internal__ import feature_column
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/tensorflow/_api/v2/__internal__/feature_column/__init__.py", line 8, in <module>
+    from tensorflow.python.feature_column.feature_column_v2 import DenseColumn # line: 1777
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/tensorflow/python/feature_column/feature_column_v2.py", line 38, in <module>
+    from tensorflow.python.feature_column import feature_column as fc_old
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/tensorflow/python/feature_column/feature_column.py", line 41, in <module>
+    from tensorflow.python.layers import base
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/tensorflow/python/layers/base.py", line 16, in <module>
+    from tensorflow.python.keras.legacy_tf_layers import base
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/tensorflow/python/keras/__init__.py", line 25, in <module>
+    from tensorflow.python.keras import models
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/tensorflow/python/keras/models.py", line 22, in <module>
+    from tensorflow.python.keras.engine import functional
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/tensorflow/python/keras/engine/functional.py", line 33, in <module>
+    from tensorflow.python.keras.engine import training as training_lib
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/tensorflow/python/keras/engine/training.py", line 54, in <module>
+    from tensorflow.python.keras.saving import hdf5_format
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/tensorflow/python/keras/saving/hdf5_format.py", line 37, in <module>
+    import h5py
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/h5py/__init__.py", line 56, in <module>
+    from . import h5a, h5d, h5ds, h5f, h5fd, h5g, h5r, h5s, h5t, h5p, h5z, h5pl
+  File "<frozen importlib._bootstrap>", line 404, in parent
+KeyboardInterrupt

@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76923bc7-5d38-4d38-8a26-6286ebe0e5c1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/test_models.sh" beforeDir="false" afterPath="$PROJECT_DIR$/test_models.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/explore_models.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_models_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/all_models_output.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cleaned_data_combined.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exploration/gmm.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/gmm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exploration/kmeans.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/kmeans.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_models.sh" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
