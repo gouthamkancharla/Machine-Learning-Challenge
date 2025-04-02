@@ -1,0 +1,365 @@
+========================================
+          SCRIPT EXECUTION LOG          
+      Timestamp: Wed Apr  2 18:07:33 EDT 2025               
+========================================
+
+--- Running: pred.py ---
+Executing python3 in directory '.' for script 'pred.py'...
+Usage: python pred.py <test_csv_file>
+--- Finished: pred.py (Exit Code: 1) ---
+
+--- Running: test.py ---
+Executing python3 in directory '.' for script 'test.py'...
+Error: Test CSV file not found at example_test_set.csv
+--- Finished: test.py (Exit Code: 1) ---
+
+--- Running: .venv/bin/activate_this.py ---
+Executing python3 in directory './.venv/bin' for script 'activate_this.py'...
+--- Finished: .venv/bin/activate_this.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/async_timeout/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/async_timeout' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/async_timeout/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/mdurl/_decode.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/mdurl' for script '_decode.py'...
+--- Finished: .venv/lib/python3.10/site-packages/mdurl/_decode.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/mdurl/_url.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/mdurl' for script '_url.py'...
+--- Finished: .venv/lib/python3.10/site-packages/mdurl/_url.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/mdurl/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/mdurl' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/mdurl/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/mdurl/_format.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/mdurl' for script '_format.py'...
+--- Finished: .venv/lib/python3.10/site-packages/mdurl/_format.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/mdurl/_parse.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/mdurl' for script '_parse.py'...
+--- Finished: .venv/lib/python3.10/site-packages/mdurl/_parse.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/mdurl/_encode.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/mdurl' for script '_encode.py'...
+--- Finished: .venv/lib/python3.10/site-packages/mdurl/_encode.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/packaging/tags.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/packaging' for script 'tags.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/packaging/tags.py", line 23, in <module>
+    from . import _manylinux, _musllinux
+ImportError: attempted relative import with no known parent package
+--- Finished: .venv/lib/python3.10/site-packages/packaging/tags.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/packaging/_musllinux.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/packaging' for script '_musllinux.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/packaging/_musllinux.py", line 15, in <module>
+    from ._elffile import ELFFile
+ImportError: attempted relative import with no known parent package
+--- Finished: .venv/lib/python3.10/site-packages/packaging/_musllinux.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/packaging/metadata.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/packaging' for script 'metadata.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/packaging/metadata.py", line 20, in <module>
+    from . import licenses, requirements, specifiers, utils
+ImportError: attempted relative import with no known parent package
+--- Finished: .venv/lib/python3.10/site-packages/packaging/metadata.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/packaging/version.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/packaging' for script 'version.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/packaging/version.py", line 16, in <module>
+    from ._structures import Infinity, InfinityType, NegativeInfinity, NegativeInfinityType
+ImportError: attempted relative import with no known parent package
+--- Finished: .venv/lib/python3.10/site-packages/packaging/version.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/packaging/licenses/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/packaging/licenses' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/packaging/licenses/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/packaging/licenses/_spdx.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/packaging/licenses' for script '_spdx.py'...
+--- Finished: .venv/lib/python3.10/site-packages/packaging/licenses/_spdx.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/packaging/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/packaging' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/packaging/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/packaging/_parser.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/packaging' for script '_parser.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/packaging/_parser.py", line 12, in <module>
+    from ._tokenizer import DEFAULT_RULES, Tokenizer
+ImportError: attempted relative import with no known parent package
+--- Finished: .venv/lib/python3.10/site-packages/packaging/_parser.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/packaging/utils.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/packaging' for script 'utils.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/packaging/utils.py", line 11, in <module>
+    from .tags import Tag, parse_tag
+ImportError: attempted relative import with no known parent package
+--- Finished: .venv/lib/python3.10/site-packages/packaging/utils.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/packaging/requirements.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/packaging' for script 'requirements.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/packaging/requirements.py", line 8, in <module>
+    from ._parser import parse_requirement as _parse_requirement
+ImportError: attempted relative import with no known parent package
+--- Finished: .venv/lib/python3.10/site-packages/packaging/requirements.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/packaging/_structures.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/packaging' for script '_structures.py'...
+--- Finished: .venv/lib/python3.10/site-packages/packaging/_structures.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/packaging/markers.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/packaging' for script 'markers.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/packaging/markers.py", line 13, in <module>
+    from ._parser import MarkerAtom, MarkerList, Op, Value, Variable
+ImportError: attempted relative import with no known parent package
+--- Finished: .venv/lib/python3.10/site-packages/packaging/markers.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/packaging/_manylinux.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/packaging' for script '_manylinux.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/packaging/_manylinux.py", line 12, in <module>
+    from ._elffile import EIClass, EIData, ELFFile, EMachine
+ImportError: attempted relative import with no known parent package
+--- Finished: .venv/lib/python3.10/site-packages/packaging/_manylinux.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/packaging/_tokenizer.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/packaging' for script '_tokenizer.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/packaging/_tokenizer.py", line 8, in <module>
+    from .specifiers import Specifier
+ImportError: attempted relative import with no known parent package
+--- Finished: .venv/lib/python3.10/site-packages/packaging/_tokenizer.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/packaging/specifiers.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/packaging' for script 'specifiers.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/packaging/specifiers.py", line 18, in <module>
+    from .utils import canonicalize_version
+ImportError: attempted relative import with no known parent package
+--- Finished: .venv/lib/python3.10/site-packages/packaging/specifiers.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/packaging/_elffile.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/packaging' for script '_elffile.py'...
+--- Finished: .venv/lib/python3.10/site-packages/packaging/_elffile.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/sharing.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum' for script 'sharing.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/sharing.py", line 11, in <module>
+    from typing import Any, Dict, Generator, List, Optional, Tuple, Union
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py", line 4, in <module>
+    from typing import Any, Callable, Collection, Dict, FrozenSet, List, Literal, Optional, Tuple, Union
+ImportError: cannot import name 'Any' from partially initialized module 'typing' (most likely due to a circular import) (/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py)
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/sharing.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/paths.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum' for script 'paths.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/paths.py", line 11, in <module>
+    from typing import Any, Callable, Dict, FrozenSet, Generator, List, Optional, Sequence, Set, Tuple, Union
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py", line 4, in <module>
+    from typing import Any, Callable, Collection, Dict, FrozenSet, List, Literal, Optional, Tuple, Union
+ImportError: cannot import name 'Any' from partially initialized module 'typing' (most likely due to a circular import) (/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py)
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/paths.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/_version.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum' for script '_version.py'...
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/_version.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/backends/dispatch.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum/backends' for script 'dispatch.py'...
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/backends/dispatch.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/backends/object_arrays.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum/backends' for script 'object_arrays.py'...
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/backends/object_arrays.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/backends/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum/backends' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/backends/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/backends/tensorflow.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum/backends' for script 'tensorflow.py'...
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/backends/tensorflow.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/backends/jax.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum/backends' for script 'jax.py'...
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/backends/jax.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/backends/cupy.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum/backends' for script 'cupy.py'...
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/backends/cupy.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/backends/theano.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum/backends' for script 'theano.py'...
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/backends/theano.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/backends/torch.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum/backends' for script 'torch.py'...
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/backends/torch.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/tests/test_parser.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum/tests' for script 'test_parser.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/tests/test_parser.py", line 7, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/tests/test_parser.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/tests/test_input.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum/tests' for script 'test_input.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/tests/test_input.py", line 7, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/tests/test_input.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/tests/test_sharing.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum/tests' for script 'test_sharing.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/tests/test_sharing.py", line 6, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/tests/test_sharing.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/tests/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum/tests' for script '__init__.py'...
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/tests/__init__.py (Exit Code: 0) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/tests/test_contract.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum/tests' for script 'test_contract.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/tests/test_contract.py", line 7, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/tests/test_contract.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/tests/test_blas.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum/tests' for script 'test_blas.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/tests/test_blas.py", line 7, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/tests/test_blas.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/tests/test_paths.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum/tests' for script 'test_paths.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/tests/test_paths.py", line 10, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/tests/test_paths.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/tests/test_edge_cases.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum/tests' for script 'test_edge_cases.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/tests/test_edge_cases.py", line 7, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/tests/test_edge_cases.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/tests/test_backends.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum/tests' for script 'test_backends.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/tests/test_backends.py", line 3, in <module>
+    import pytest
+ModuleNotFoundError: No module named 'pytest'
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/tests/test_backends.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum' for script '__init__.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/__init__.py", line 3, in <module>
+    from opt_einsum import blas, helpers, path_random, paths
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/__init__.py", line 3, in <module>
+    from opt_einsum import blas, helpers, path_random, paths
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/blas.py", line 3, in <module>
+    from typing import List, Sequence, Tuple, Union
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py", line 4, in <module>
+    from typing import Any, Callable, Collection, Dict, FrozenSet, List, Literal, Optional, Tuple, Union
+ImportError: cannot import name 'Any' from partially initialized module 'typing' (most likely due to a circular import) (/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py)
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/__init__.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/path_random.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum' for script 'path_random.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/path_random.py", line 11, in <module>
+    from typing import Any, Dict, Generator, Iterable, List, Optional, Tuple, Union
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py", line 4, in <module>
+    from typing import Any, Callable, Collection, Dict, FrozenSet, List, Literal, Optional, Tuple, Union
+ImportError: cannot import name 'Any' from partially initialized module 'typing' (most likely due to a circular import) (/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py)
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/path_random.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/parser.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum' for script 'parser.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/parser.py", line 4, in <module>
+    from typing import Any, Dict, Iterator, List, Sequence, Tuple
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py", line 4, in <module>
+    from typing import Any, Callable, Collection, Dict, FrozenSet, List, Literal, Optional, Tuple, Union
+ImportError: cannot import name 'Any' from partially initialized module 'typing' (most likely due to a circular import) (/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py)
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/parser.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/blas.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum' for script 'blas.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/blas.py", line 3, in <module>
+    from typing import List, Sequence, Tuple, Union
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py", line 4, in <module>
+    from typing import Any, Callable, Collection, Dict, FrozenSet, List, Literal, Optional, Tuple, Union
+ImportError: cannot import name 'Any' from partially initialized module 'typing' (most likely due to a circular import) (/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py)
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/blas.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/typing.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum' for script 'typing.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py", line 4, in <module>
+    from typing import Any, Callable, Collection, Dict, FrozenSet, List, Literal, Optional, Tuple, Union
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py", line 4, in <module>
+    from typing import Any, Callable, Collection, Dict, FrozenSet, List, Literal, Optional, Tuple, Union
+ImportError: cannot import name 'Any' from partially initialized module 'typing' (most likely due to a circular import) (/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py)
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/typing.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/testing.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum' for script 'testing.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/testing.py", line 4, in <module>
+    from typing import Any, Dict, List, Literal, Optional, Tuple, Union, overload
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py", line 4, in <module>
+    from typing import Any, Callable, Collection, Dict, FrozenSet, List, Literal, Optional, Tuple, Union
+ImportError: cannot import name 'Any' from partially initialized module 'typing' (most likely due to a circular import) (/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py)
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/testing.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/contract.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum' for script 'contract.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/contract.py", line 5, in <module>
+    from typing import Any, Collection, Dict, Iterable, List, Literal, Optional, Sequence, Tuple, Union, overload
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py", line 4, in <module>
+    from typing import Any, Callable, Collection, Dict, FrozenSet, List, Literal, Optional, Tuple, Union
+ImportError: cannot import name 'Any' from partially initialized module 'typing' (most likely due to a circular import) (/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py)
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/contract.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/opt_einsum/helpers.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/opt_einsum' for script 'helpers.py'...
+Traceback (most recent call last):
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/helpers.py", line 3, in <module>
+    from typing import Any, Collection, Dict, FrozenSet, Iterable, List, Tuple, overload
+  File "/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py", line 4, in <module>
+    from typing import Any, Callable, Collection, Dict, FrozenSet, List, Literal, Optional, Tuple, Union
+ImportError: cannot import name 'Any' from partially initialized module 'typing' (most likely due to a circular import) (/Users/goutham/Desktop/Machine-Learning-Challenge/.venv/lib/python3.10/site-packages/opt_einsum/typing.py)
+--- Finished: .venv/lib/python3.10/site-packages/opt_einsum/helpers.py (Exit Code: 1) ---
+
+--- Running: .venv/lib/python3.10/site-packages/keras/__init__.py ---
+Executing python3 in directory './.venv/lib/python3.10/site-packages/keras' for script '__init__.py'...

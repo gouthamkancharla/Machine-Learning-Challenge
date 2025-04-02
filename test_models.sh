@@ -1,30 +1,33 @@
 #!/bin/bash
 
 # Define the root directory to search within
-SEARCH_DIR="Machine-Learning-Challenge"
+# CHANGE: Search from the current directory (.)
+SEARCH_DIR="."
 
-# Define the output file
-OUTPUT_FILE="all_scripts_output.txt"
+# Define the output file (will be created in the current directory)
+OUTPUT_FILE="all_models_output.txt"
 
 # --- Helper Function to Execute a Single Python Script ---
-# This function takes the python script path as its argument ($1)
-# It handles changing directory, executing, and logging output/errors.
+# (This function remains the same as before)
 execute_python_script() {
     local script_path="$1"
     local script_dir
     local script_name
     local exit_code
 
+    # Clean up path for display if it starts with ./
+    local display_path="${script_path#./}"
+
     # Check if the input is a file
     if [ ! -f "$script_path" ]; then
-        echo "--- Error: Not a file: $script_path ---" >> "$OUTPUT_FILE"
+        echo "--- Error: Not a file: $display_path ---" >> "$OUTPUT_FILE"
         return 1 # Indicate failure
     fi
 
     script_dir=$(dirname "$script_path")
     script_name=$(basename "$script_path")
 
-    echo "--- Running: $script_path ---" >> "$OUTPUT_FILE"
+    echo "--- Running: $display_path ---" >> "$OUTPUT_FILE"
     echo "Executing python3 in directory '$script_dir' for script '$script_name'..." >> "$OUTPUT_FILE"
 
     # Execute python script from its own directory in a subshell
@@ -32,7 +35,7 @@ execute_python_script() {
     (cd "$script_dir" && python3 "$script_name") >> "$OUTPUT_FILE" 2>&1
     exit_code=$? # Capture exit code of the subshell/python command
 
-    echo "--- Finished: $script_path (Exit Code: $exit_code) ---" >> "$OUTPUT_FILE"
+    echo "--- Finished: $display_path (Exit Code: $exit_code) ---" >> "$OUTPUT_FILE"
     echo "" >> "$OUTPUT_FILE" # Add a blank line for separation
 
     # Return the exit code of the python script
@@ -40,13 +43,6 @@ execute_python_script() {
 }
 
 # --- Main Script Logic ---
-
-# Check if the search directory exists
-if [ ! -d "$SEARCH_DIR" ]; then
-  echo "Error: Directory '$SEARCH_DIR' not found."
-  echo "Please run this script from the directory containing '$SEARCH_DIR'."
-  exit 1
-fi
 
 # Check if python3 command exists
 if ! command -v python3 &> /dev/null; then
@@ -60,7 +56,7 @@ fi
 export OUTPUT_FILE
 
 echo "Starting script execution..."
-echo "Output will be saved to: $OUTPUT_FILE"
+echo "Output will be saved to: $OUTPUT_FILE (in the current directory)"
 echo "========================================" >> "$OUTPUT_FILE"
 echo "          SCRIPT EXECUTION LOG          " >> "$OUTPUT_FILE"
 echo "      Timestamp: $(date)               " >> "$OUTPUT_FILE"
@@ -71,12 +67,11 @@ echo "" >> "$OUTPUT_FILE"
 export -f execute_python_script
 
 # Find all .py files and execute the helper function for each
-# Uses 'bash -c' because function exporting is a bash feature.
-# The '_' is a placeholder for $0 in the bash -c context.
-# "$1" inside the bash -c command refers to the script path passed by find ({}).
-find "$SEARCH_DIR" -type f -name "*.py" -exec bash -c 'execute_python_script "$1"' _ {} \;
+# CHANGE: No need to check for SEARCH_DIR existence since it's "."
+# The find command now starts searching from the current directory.
+# We add -path './test_models.sh' -prune -o to prevent the script from finding itself.
+find "$SEARCH_DIR" \( -name 'test_models.sh' -o -name "${OUTPUT_FILE}" \) -prune -o -type f -name "*.py" -exec bash -c 'execute_python_script "$1"' _ {} \;
 
-# Note: The redirection >> "$OUTPUT_FILE" 2>&1 is now handled *inside* the function
 
 echo "========================================" >> "$OUTPUT_FILE"
 echo "           ALL SCRIPTS FINISHED         " >> "$OUTPUT_FILE"
