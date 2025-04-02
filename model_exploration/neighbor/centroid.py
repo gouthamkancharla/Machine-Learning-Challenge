@@ -18,7 +18,7 @@ from sklearn.preprocessing import LabelEncoder
 # Consider adding StandardScaler for feature scaling, especially for distance-based models
 # from sklearn.preprocessing import StandardScaler
 
-file_name = "../cleaned_data_combined.csv"
+file_name = "../../dataset/cleaned_data_combined.csv"
 random_state = 42
 
 def to_numeric(s):

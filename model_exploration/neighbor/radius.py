@@ -12,7 +12,7 @@ from sklearn.neighbors import NearestCentroid # Changed import
 from sklearn.preprocessing import LabelEncoder
 from sklearn.model_selection import train_test_split # Using sklearn's split for clarity
 
-file_name = "../../cleaned_data_combined.csv"
+file_name = "../../dataset/cleaned_data_combined.csv"
 random_state = 42
 
 def to_numeric(s):

@@ -16,7 +16,7 @@ from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.metrics import silhouette_score, adjusted_rand_score, normalized_mutual_info_score
 import numpy as np # Import numpy for isnan check
 
-file_name = "../cleaned_data_combined.csv" # Make sure this path is correct
+file_name = "../../dataset/cleaned_data_combined.csv" # Make sure this path is correct
 random_state = 42
 
 def to_numeric(s):

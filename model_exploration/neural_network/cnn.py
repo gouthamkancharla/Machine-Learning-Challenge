@@ -9,7 +9,7 @@ from tensorflow.keras.layers import Dense, Dropout, Input, Conv1D, MaxPooling1D,
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.utils import to_categorical
 
-file_name = "../../cleaned_data_combined.csv"
+file_name = "../../dataset/cleaned_data_combined.csv"
 random_state = 42
 
 def to_numeric(s):
