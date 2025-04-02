@@ -1,8 +1,17 @@
+"""
+This Python file provides some useful code for reading the training file
+"cleaned_data_combined.csv". You may adapt this code as you see fit. However,
+keep in mind that the code provided does only basic feature transformations
+to build a rudimentary kNN model in sklearn. Not all features are considered
+in this code, and you should consider those features! Use this code
+where appropriate, but don't stop here!
+"""
+
 import pandas as pd
-from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import LabelEncoder
 
-file_name = "cleaned_data_combined.csv"
+file_name = "../cleaned_data_combined.csv"
 random_state = 42
 
 def to_numeric(s):
@@ -55,8 +64,8 @@ if __name__ == "__main__":
     x_test = x[n_train:]
     y_test = y[n_train:]
 
-    # Train and evaluate a Decision Tree classifier
-    clf = DecisionTreeClassifier(random_state=random_state)
+    # Train and evaluate a kNN classifier
+    clf = KNeighborsClassifier(n_neighbors=3)
     clf.fit(x_train, y_train)
     train_acc = clf.score(x_train, y_train)
     test_acc = clf.score(x_test, y_test)
