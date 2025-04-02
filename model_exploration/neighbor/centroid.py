@@ -1,32 +1,24 @@
+# --- START OF FILE centroid.py ---
+
 """
 This Python file provides code for reading the training file
-"cleaned_data_combined.csv" and training an instance-based model.
-It adapts the original kNN baseline code to use RadiusNeighborsClassifier.
-
-Keep in mind that the code provided does only basic feature transformations
-to build a rudimentary model. Not all features are considered
-in this code, and you should consider those features! Data scaling and
-hyperparameter tuning (like the 'radius') are also important steps
-for optimization. Use this code where appropriate, but don't stop here!
-
-Another alternative instance-based model in scikit-learn is NearestCentroid.
+"cleaned_data_combined.csv" and training a Nearest Centroid classifier.
+It adapts the original kNN baseline code. Note that basic feature
+transformations are used, and further feature engineering might be beneficial.
 """
 
 import pandas as pd
-from sklearn.neighbors import RadiusNeighborsClassifier # Changed import
+from sklearn.neighbors import NearestCentroid # Changed import
 from sklearn.preprocessing import LabelEncoder
-# Consider adding StandardScaler for feature scaling, especially for distance-based models
-# from sklearn.preprocessing import StandardScaler
+from sklearn.model_selection import train_test_split # Using sklearn's split for clarity
 
-file_name = "../../dataset/cleaned_data_combined.csv"
+file_name = "../../dataset/cleaned_data_combined_TRIMMED.csv"
 random_state = 42
 
 def to_numeric(s):
     """Converts string `s` to a float.
 
     Invalid strings and NaN values will be converted to float('nan').
-    (Note: This function is not actively used in the current feature selection below,
-     but might be useful if processing other numerical columns).
     """
     if isinstance(s, str):
         s = s.replace(",", '')
@@ -38,91 +30,58 @@ if __name__ == "__main__":
     df = pd.read_csv(file_name)
 
     # Select a subset of features for the baseline model
-    # WARNING: This is a limited subset. Consider using more features for better performance.
+    # Consider adding/removing/transforming features for better performance
     selected_features = ["Q2: How many ingredients would you expect this food item to contain?",
                          "Q3: In what setting would you expect this food to be served? Please check all that apply",
                          "Q4: How much would you expect to pay for one serving of this food item?",
                          "Q6: What drink would you pair with this food item?"]
 
     # Prepare the data for training
-    df = df[selected_features + ["Label"]]
+    df_processed = df[selected_features + ["Label"]].copy() # Work on a copy
 
-    # Handle missing values (using simple fillna(0) as in the original baseline)
-    # More sophisticated imputation might be better.
-    df = df.fillna(0)
+    # Handle missing values - Simple fill with 0, consider other strategies
+    # Apply to_numeric specifically to Q4 before filling NaNs
+    # Ensure Q4 is numeric before potential string operations in LabelEncoder
+    if "Q4: How much would you expect to pay for one serving of this food item?" in df_processed.columns:
+        df_processed["Q4: How much would you expect to pay for one serving of this food item?"] = df_processed["Q4: How much would you expect to pay for one serving of this food item?"].apply(to_numeric)
 
-    # Encode categorical features using simple integer encoding
-    # Consider OneHotEncoder for nominal features if appropriate,
-    # although LabelEncoder is often sufficient for tree-based/neighbor-based models sometimes.
+    df_processed = df_processed.fillna(0)
+
+    # Encode categorical features using LabelEncoder
+    feature_encoders = {}
     for col in selected_features:
-        if df[col].dtype == 'object':
-            df[col] = LabelEncoder().fit_transform(df[col].astype(str))
+        if df_processed[col].dtype == 'object':
+            le = LabelEncoder()
+            df_processed[col] = le.fit_transform(df_processed[col].astype(str))
+            feature_encoders[col] = le # Store encoders if needed later
 
-    # Convert categorical labels to numerical values (one-hot encoding)
-    df = pd.get_dummies(df, columns=["Label"], prefix="Label")
+    # Encode the target variable 'Label' into numerical format (0, 1, 2...)
+    # NearestCentroid expects a 1D array of labels, not one-hot encoded
+    label_encoder = LabelEncoder()
+    df_processed["Label_encoded"] = label_encoder.fit_transform(df_processed["Label"])
 
-    # Shuffle the dataset
-    df = df.sample(frac=1, random_state=random_state)
+    # Separate features (X) and target (y)
+    X = df_processed[selected_features].values
+    y = df_processed["Label_encoded"].values # Use the single encoded column
 
-    x = df.drop(columns=[col for col in df.columns if col.startswith("Label_")]).values
-    y = df[[col for col in df.columns if col.startswith("Label_")]].values
+    # Train-test split using sklearn function
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.2, random_state=random_state, stratify=y # Stratify helps maintain class proportion
+    )
 
-    # === Feature Scaling (Recommended but optional step) ===
-    # Distance-based algorithms like RadiusNeighbors often benefit from scaling.
-    # Uncomment the following lines to add StandardScaler:
-    # scaler = StandardScaler()
-    # x = scaler.fit_transform(x) # Scale all features
-    # ========================================================
+    # Train and evaluate a Nearest Centroid classifier
+    # No 'n_neighbors' parameter for NearestCentroid
+    clf = NearestCentroid()
+    clf.fit(X_train, y_train)
 
-    # Train-test split
-    n_train = int(0.8 * len(df))
-    x_train = x[:n_train]
-    y_train = y[:n_train]
+    # Evaluate the model
+    train_acc = clf.score(X_train, y_train)
+    test_acc = clf.score(X_test, y_test)
 
-    x_test = x[n_train:]
-    y_test = y[n_train:]
+    print(f"{type(clf).__name__} train acc: {train_acc:.4f}") # Added formatting
+    print(f"{type(clf).__name__} test acc: {test_acc:.4f}") # Added formatting
 
-    # --- Model Change: Use RadiusNeighborsClassifier ---
-    # The 'radius' parameter is crucial and data-dependent.
-    # It defines the maximum distance for a point to be considered a neighbor.
-    # This value likely needs tuning based on the feature space distribution.
-    # If no neighbors are found within the radius, it can lead to errors or
-    # require handling (e.g., setting outlier_label).
-    # We also specify `outlier_label` for points with no neighbors in radius.
-    # Let's find the majority class in y_train to use as the outlier label.
-    # Note: y_train is one-hot encoded, so we need to convert back or find the mode column index
-    y_train_single_label = y_train.argmax(axis=1)
-    from scipy.stats import mode
-    import numpy as np
+    # Optional: Print class labels if needed
+    # print("Class labels mapping:", dict(zip(label_encoder.classes_, label_encoder.transform(label_encoder.classes_))))
 
-    mode_result = mode(y_train_single_label, keepdims=False)
-    modes_array: np.ndarray = mode_result[0]
-
-    # Use .item() IF you are sure there's only one mode element in modes_array
-    try:
-        majority_class_index: int = int(modes_array.item())
-    except ValueError:
-        # Handle the case where .item() fails (e.g., multiple modes found)
-        print("Warning: Multiple modes found or mode array not scalar. Using the first mode.")
-        majority_class_index: int = int(modes_array[0]) # Fallback to first mode
-
-    # Create the outlier label in the same one-hot format as y_train
-    num_classes = y_train.shape[1]
-    outlier_label_one_hot = [0] * num_classes
-    outlier_label_one_hot[majority_class_index] = 1
-
-
-    clf = RadiusNeighborsClassifier(radius=10.0, # <<< Key hyperparameter - NEEDS TUNING!
-                                    weights='uniform', # can be 'uniform' or 'distance'
-                                    outlier_label=outlier_label_one_hot # Predict majority class for outliers
-                                    # You might need to adjust n_jobs depending on your system
-                                    # n_jobs=-1 # Use all available CPU cores
-                                    )
-    # -------------------------------------------------
-
-    # Train and evaluate the classifier
-    clf.fit(x_train, y_train)
-    train_acc = clf.score(x_train, y_train)
-    test_acc = clf.score(x_test, y_test)
-    print(f"{type(clf).__name__} (radius={clf.radius}) train acc: {train_acc:.4f}")
-    print(f"{type(clf).__name__} (radius={clf.radius}) test acc: {test_acc:.4f}")
+# --- END OF FILE centroid.py ---

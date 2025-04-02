@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76923bc7-5d38-4d38-8a26-6286ebe0e5c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/explore_models.sh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/all_models_output.txt" beforeDir="false" afterPath="$PROJECT_DIR$/all_models_output.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cleaned_data_combined.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_exploration/gmm.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/gmm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_exploration/kmeans.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/kmeans.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_models.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exploration/neighbor/centroid.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/neighbor/centroid.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exploration/neighbor/radius.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/neighbor/radius.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,18 +47,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.decision_tree.executor&quot;: &quot;Run&quot;,
-    &quot;Python.knn.executor&quot;: &quot;Run&quot;,
-    &quot;Python.neural_network.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;development&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/goutham/Desktop/Machine-Learning-Challenge&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.centroid.executor": "Run",
+    "Python.decision_tree.executor": "Run",
+    "Python.knn.executor": "Run",
+    "Python.neural_network.executor": "Run",
+    "Python.radius.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "development",
+    "last_opened_file_path": "/Users/goutham/Desktop/Machine-Learning-Challenge",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/model_exploration/neural_network" />
