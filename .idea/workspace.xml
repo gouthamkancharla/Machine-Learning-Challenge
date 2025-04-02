@@ -5,14 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76923bc7-5d38-4d38-8a26-6286ebe0e5c1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/model_exploration/neighbor/radius.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model_exploration/neural_network/cnn.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model_exploration/neural_network/rnn.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model_exploration/tree/gradient_boosting.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/model_exploration/tree/random_forest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_exploration/neighbor/rn.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/neighbor/centroid.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_exploration/neural_network/neural_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/neural_network/mlp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exploration/gmm.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/gmm.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exploration/kmeans.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/kmeans.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exploration/neighbor/knn.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/neighbor/knn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exploration/neighbor/radius.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/neighbor/radius.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exploration/neural_network/cnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/neural_network/cnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exploration/neural_network/mlp.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/neural_network/mlp.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exploration/neural_network/rnn.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/neural_network/rnn.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exploration/tree/decision_tree.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/tree/decision_tree.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exploration/tree/gradient_boosting.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/tree/gradient_boosting.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/model_exploration/tree/random_forest.py" beforeDir="false" afterPath="$PROJECT_DIR$/model_exploration/tree/random_forest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

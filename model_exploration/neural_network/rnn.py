@@ -8,7 +8,7 @@ from tensorflow.keras.layers import Dense, Dropout, Input, LSTM, Reshape # Added
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.utils import to_categorical
 
-file_name = "../../dataset/cleaned_data_combined.csv"
+file_name = "../../dataset/cleaned_data_combined_TRIMMED.csv"
 random_state = 42
 
 def to_numeric(s):

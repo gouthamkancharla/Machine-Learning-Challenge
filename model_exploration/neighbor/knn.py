@@ -11,7 +11,7 @@ import pandas as pd
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import LabelEncoder
 
-file_name = "../../dataset/cleaned_data_combined.csv"
+file_name = "../../dataset/cleaned_data_combined_TRIMMED.csv"
 random_state = 42
 
 def to_numeric(s):
