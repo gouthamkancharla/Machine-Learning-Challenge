@@ -1,22 +1,22 @@
-# --- START OF FILE kmeans_clustering.py ---
+# --- START OF FILE gmm_clustering.py ---
 
 """
-This Python file demonstrates k-means clustering on the dataset from
-"cleaned_data_combined.csv". It preprocesses features, applies k-means,
-and evaluates the results using common clustering metrics.
+This Python file demonstrates Gaussian Mixture Model (GMM) clustering on the
+dataset from "cleaned_data_combined.csv". It preprocesses features,
+applies GMM, and evaluates the results using common clustering metrics
+and model selection criteria (BIC/AIC).
 
-Note: This script adapts the preprocessing steps from the original kNN example
-but modifies them for unsupervised clustering (k-means). Feature scaling is added,
-and one-hot encoding is used for categorical features.
+Note: This script adapts preprocessing steps similar to the k-means example.
+Feature scaling and one-hot encoding are used.
 """
 
 import pandas as pd
-from sklearn.cluster import KMeans
+from sklearn.mixture import GaussianMixture
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 from sklearn.metrics import silhouette_score, adjusted_rand_score, normalized_mutual_info_score
 import numpy as np # Import numpy for isnan check
 
-file_name = "../dataset/cleaned_data_combined_TRIMMED.csv" # Make sure this path is correct
+file_name = "../dataset/cleaned_data_combined_TRIMMED.csv"  # Make sure this path is correct
 random_state = 42
 
 def to_numeric(s):
@@ -61,9 +61,6 @@ if __name__ == "__main__":
 
     # 1. Convert potentially numeric string columns to actual numeric types
     # Apply 'to_numeric' carefully, especially to columns intended to be numeric
-    # Example: Apply to Q4 if it contains strings like "1,000" or "$5.00"
-    # Note: The original example didn't explicitly use to_numeric on selected cols,
-    # but Q4 might benefit. Assuming Q2 and Q4 should be numeric:
     if "Q2: How many ingredients would you expect this food item to contain?" in df_features.columns:
         df_features["Q2: How many ingredients would you expect this food item to contain?"] = df_features["Q2: How many ingredients would you expect this food item to contain?"].apply(to_numeric)
     if "Q4: How much would you expect to pay for one serving of this food item?" in df_features.columns:
@@ -75,30 +72,34 @@ if __name__ == "__main__":
     numerical_cols = [col for col in selected_features if col not in categorical_cols]
 
     # 3. Handle Missing Values
-    # For numerical: Impute with median (often more robust to outliers than mean)
+    # For numerical: Impute with median
     for col in numerical_cols:
         if df_features[col].isnull().any():
             median_val = df_features[col].median()
             df_features[col] = df_features[col].fillna(median_val)
+            if df_features[col].isnull().any(): # Handle cases where median might be NaN (e.g., all NaNs)
+                df_features[col] = df_features[col].fillna(0)
 
-    # For categorical: Impute with mode or a constant placeholder like 'Missing'
+
+    # For categorical: Impute with mode
     for col in categorical_cols:
         if df_features[col].isnull().any():
-            mode_val = df_features[col].mode()[0] # mode() returns a Series
+            # Calculate mode, handle potential multiple modes by taking the first
+            modes = df_features[col].mode()
+            mode_val = modes[0] if not modes.empty else 'Missing' # Use placeholder if mode is empty
             df_features[col] = df_features[col].fillna(mode_val)
 
     # 4. Encode Categorical Features using One-Hot Encoding
-    # pd.get_dummies is suitable here
-    df_features = pd.get_dummies(df_features, columns=categorical_cols, drop_first=False) # Keep all dummies
+    df_features = pd.get_dummies(df_features, columns=categorical_cols, drop_first=False, dummy_na=False) # Don't create NaN category if we filled them
 
     # Ensure all feature columns are numeric after get_dummies
-    # This loop helps catch any unexpected non-numeric types left.
     for col in df_features.columns:
+        # Convert to numeric; coerce errors will turn problematic values into NaN
         df_features[col] = pd.to_numeric(df_features[col], errors='coerce')
+        # Check if NaNs were introduced or still exist, and fill them (e.g., with 0 or median/mean of col)
         if df_features[col].isnull().any():
-            # If NaNs appear after coercion (shouldn't happen with get_dummies), fill them
-            print(f"Warning: NaNs appeared in column {col} after get_dummies/coercion. Filling with 0.")
-            df_features[col] = df_features[col].fillna(0)
+            print(f"Warning: NaNs found in column {col} after get_dummies/coercion. Filling with 0.")
+            df_features[col] = df_features[col].fillna(0) # Or use median/mean if appropriate
 
 
     # --- Feature Scaling ---
@@ -106,19 +107,26 @@ if __name__ == "__main__":
     scaler = StandardScaler()
     x_scaled = scaler.fit_transform(df_features)
 
-    # --- K-Means Clustering ---
+    # --- Gaussian Mixture Model Clustering ---
 
-    # Determine the number of clusters (k)
-    # Using the number of unique original labels as a common heuristic
-    n_clusters = true_labels_raw.nunique()
-    print(f"Number of unique labels (using as k for k-means): {n_clusters}")
+    # Determine the number of components (clusters)
+    # Using the number of unique original labels as a starting point
+    n_components = true_labels_raw.nunique()
+    print(f"Number of unique labels (using as n_components for GMM): {n_components}")
 
-    # Initialize and fit K-Means
-    kmeans = KMeans(n_clusters=n_clusters, random_state=random_state, n_init=10) # n_init=10 is recommended
-    kmeans.fit(x_scaled)
+    # Initialize and fit Gaussian Mixture Model
+    # covariance_type options: 'full', 'tied', 'diag', 'spherical'
+    covariance_type = 'full'
+    gmm = GaussianMixture(n_components=n_components,
+                          covariance_type=covariance_type,
+                          random_state=random_state,
+                          n_init=5, # Number of initializations to perform
+                          max_iter=100) # Max iterations for EM
+    gmm.fit(x_scaled)
 
-    # Get cluster assignments for each data point
-    cluster_labels = kmeans.labels_
+    # Get cluster assignments (hard assignments)
+    cluster_labels = gmm.predict(x_scaled)
+    # You can also get probabilities: cluster_probs = gmm.predict_proba(x_scaled)
 
     # --- Evaluation ---
     # Encode the true labels numerically for evaluation metrics
@@ -126,25 +134,33 @@ if __name__ == "__main__":
     true_labels_encoded = le.fit_transform(true_labels_raw)
 
     # Calculate clustering metrics
-    inertia = kmeans.inertia_
-    silhouette = silhouette_score(x_scaled, cluster_labels)
+    # Note: Silhouette score can be computationally expensive for large datasets
+    try:
+        silhouette = silhouette_score(x_scaled, cluster_labels)
+    except ValueError as e:
+        print(f"Could not calculate Silhouette Score: {e}")
+        silhouette = float('nan') # Assign NaN if calculation fails (e.g., only 1 cluster found)
+
+
     ari = adjusted_rand_score(true_labels_encoded, cluster_labels)
     nmi = normalized_mutual_info_score(true_labels_encoded, cluster_labels)
 
-    print(f"\n--- K-Means Clustering Results ---")
-    print(f"Number of clusters (k): {n_clusters}")
-    print(f"Inertia (Within-cluster sum of squares): {inertia:.4f}")
+    # Calculate BIC and AIC (lower is generally better)
+    bic = gmm.bic(x_scaled)
+    aic = gmm.aic(x_scaled)
+
+    print(f"\n--- Gaussian Mixture Model Clustering Results ---")
+    print(f"Number of components: {n_components}")
+    print(f"Covariance type: '{covariance_type}'")
     print(f"Silhouette Score: {silhouette:.4f}")
     print(f"Adjusted Rand Index (ARI): {ari:.4f}")
     print(f"Normalized Mutual Information (NMI): {nmi:.4f}")
-
-    # Optional: You can inspect the cluster centers
-    # print("\nCluster Centers (in scaled feature space):")
-    # print(kmeans.cluster_centers_)
+    print(f"Bayesian Information Criterion (BIC): {bic:.4f}")
+    print(f"Akaike Information Criterion (AIC): {aic:.4f}")
 
     # Optional: Analyze cluster composition relative to true labels
     # results_df = pd.DataFrame({'TrueLabel': true_labels_raw, 'Cluster': cluster_labels})
     # print("\nCluster composition by true label:")
     # print(pd.crosstab(results_df['TrueLabel'], results_df['Cluster']))
 
-# --- END OF FILE kmeans_clustering.py ---
+# --- END OF FILE gmm_clustering.py ---

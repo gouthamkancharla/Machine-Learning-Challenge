@@ -36,24 +36,27 @@ echo "Python Command: $($PYTHON_CMD --version 2>&1)" | tee -a "$LOG_FILE" # Show
 echo "Logging output to: $LOG_FILE"
 echo "" | tee -a "$LOG_FILE"
 
-
 # --- Find and Execute Scripts ---
 # Use find to locate .py files within the target directory, excluding __init__.py
 # Use -print0 and read -d '' for safe handling of filenames with spaces/special chars
 find "$TARGET_DIR" -type f -name "*.py" -not -name "__init__.py" -print0 | while IFS= read -r -d $'\0' script_path; do
 
+    # Get the directory containing the script and the script's basename
     script_dir=$(dirname "$script_path")
     script_name=$(basename "$script_path")
 
     # Log the script being run to console and file
     echo "--- Running: $script_path ---" | tee -a "$LOG_FILE"
-    echo "Executing $PYTHON_CMD in directory '$PROJECT_ROOT' for script '$script_path'..." >> "$LOG_FILE"
+    # More detailed logging about the execution context change
+    echo "Changing working directory to '$script_dir' for execution." >> "$LOG_FILE"
+    echo "Executing: (cd '$script_dir' && $PYTHON_CMD '$script_name')" >> "$LOG_FILE"
 
-    # Execute the python script
+    # Execute the python script INSIDE A SUBSHELL after changing directory
+    # The subshell ensures the 'cd' only affects this command.
+    # We execute using the script's basename because we are now in its directory.
     # Redirect both stdout and stderr to the log file (appending)
     # Capture the exit code ($?) immediately after execution
-    # Run the script from the project root directory ($PROJECT_ROOT)
-    "$PYTHON_CMD" "$script_path" >> "$LOG_FILE" 2>&1
+    (cd "$script_dir" && "$PYTHON_CMD" "$script_name") >> "$LOG_FILE" 2>&1
     exit_code=$?
 
     # Log the completion status and exit code to console and file
