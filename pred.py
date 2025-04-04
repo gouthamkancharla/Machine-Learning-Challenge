@@ -62,7 +62,7 @@ def preprocess_data(dataset):
                 for i in l:
                     if i == "Week day lunch":
                         x[0] = 1
-                    elif i == "Week day dinner":   
+                    elif i == "Week day dinner":
                         x[1] = 1
                     elif i == "Weekend lunch":
                         x[2] = 1
@@ -102,13 +102,13 @@ def preprocess_data(dataset):
     def generate_fet10_reminiscent_movie():
         retlst= []
         movie_map = {"Home Alone": 1, "Teenage Mutant Ninja Turtles": 1, "spiderman": 1, "Spider-Man 2": 1, "Spiderman": 1,
-                    "Cloudy with a Chance of Meatballs": 1, "Cloudy with a chance of meatballs": 1, "The Godfather": 1,
-                    "Home alone": 1, "Ratatoullie": 1,
-                    "The Avengers": 2, "Avengers": 2, "avengers": 2, "The Avengers (2012)": 2, "none": 2, "Aladdin": 2,
-                    "The Dictator": 2, "Borat": 2, "Dangal": 2,
-                    "Jiro Dreams of Sushi": 3, "Finding Nemo": 3, "Spirited Away": 3, "Kill Bill": 3, "Your Name": 3,
-                    "Kung Fu Panda": 3, "Monsters Inc.": 3, "Godzilla": 3, "The Wolverine": 3, "Big Hero 6": 3
-                    }
+                     "Cloudy with a Chance of Meatballs": 1, "Cloudy with a chance of meatballs": 1, "The Godfather": 1,
+                     "Home alone": 1, "Ratatoullie": 1,
+                     "The Avengers": 2, "Avengers": 2, "avengers": 2, "The Avengers (2012)": 2, "none": 2, "Aladdin": 2,
+                     "The Dictator": 2, "Borat": 2, "Dangal": 2,
+                     "Jiro Dreams of Sushi": 3, "Finding Nemo": 3, "Spirited Away": 3, "Kill Bill": 3, "Your Name": 3,
+                     "Kung Fu Panda": 3, "Monsters Inc.": 3, "Godzilla": 3, "The Wolverine": 3, "Big Hero 6": 3
+                     }
         for movie in dataset["P5"]:
             if movie in movie_map:
                 retlst.append(movie_map[movie])
@@ -119,10 +119,10 @@ def preprocess_data(dataset):
     def generate_fet11_drink_to_pair_with():
         retlst= []
         drink_map = {"Water": 1, "water": 1, "Iced Tea": 1, "Nestea": 1, "Juice": 1,
-                    "Coke": 2, "coke": 2, "Soda": 2, "soda": 2, "Coca Cola": 2, "Coca-Cola": 2,
-                    "Sprite": 2, "Diet Coke": 2, "Pepsi": 2,
-                    "Tea": 3, "Sake": 3, "tea": 3, "Green tea": 3, "Green Tea": 3, "sake": 3, "green tea": 3
-                    }
+                     "Coke": 2, "coke": 2, "Soda": 2, "soda": 2, "Coca Cola": 2, "Coca-Cola": 2,
+                     "Sprite": 2, "Diet Coke": 2, "Pepsi": 2,
+                     "Tea": 3, "Sake": 3, "tea": 3, "Green tea": 3, "Green Tea": 3, "sake": 3, "green tea": 3
+                     }
         for drink in dataset["P6"]:
             if drink in drink_map:
                 retlst.append(drink_map[drink])
@@ -131,7 +131,7 @@ def preprocess_data(dataset):
         return retlst
 
     def generate_fet12_16_reminiscent_persons_versatility():
-        retlst = [] #Parents,Siblings,Friends,Teachers,Strangers	
+        retlst = [] #Parents,Siblings,Friends,Teachers,Strangers
         for persons in dataset["P7"]:
             x = [0,0,0,0,0]
             try:
@@ -139,7 +139,7 @@ def preprocess_data(dataset):
                 for i in l:
                     if i == "Parents":
                         x[0] = 1
-                    elif i == "Siblings":   
+                    elif i == "Siblings":
                         x[1] = 1
                     elif i == "Friends":
                         x[2] = 1
@@ -155,18 +155,18 @@ def preprocess_data(dataset):
     def generate_fet17_hot_sauce_level():
         retlst = []
         hot_sauce_level_map = {"None": 0,
-                            "A little (mild)": 1,
-                            "A moderate amount (medium)": 2,
-                            "A lot (hot)": 3,
-                            "I will have some of this food item with my hot sauce": 4
-                            }
+                               "A little (mild)": 1,
+                               "A moderate amount (medium)": 2,
+                               "A lot (hot)": 3,
+                               "I will have some of this food item with my hot sauce": 4
+                               }
         for hot_sauce_level in dataset["P8"]:
             retlst.append(hot_sauce_level_map[hot_sauce_level])
         return retlst
 
     peoples = generate_fet12_16_reminiscent_persons_versatility()
     places = generate_fet3_8_occasion_versatility()
-        
+
     feature_matrix = np.stack([
         generate_fet1_food_complexity(),
         generate_fet2_number_of_ingredients(),
@@ -176,7 +176,7 @@ def preprocess_data(dataset):
         generate_fet11_drink_to_pair_with(),
         peoples[:,0], peoples[:,1], peoples[:,2], peoples[:,3], peoples[:,4],
         generate_fet17_hot_sauce_level()
-        ], axis=1)
+    ], axis=1)
     return feature_matrix
 
 def make_prediction(F1,F2,F3,F4,F5,F6,F7,F8,F9,F10,F11,F12,F13,F14,F15,F16,F17):
@@ -326,7 +326,7 @@ def predict(data):
 
 def predict_all(csv_file_path):
     """
-    Processes a CSV file containing input data, generates predictions for each row, 
+    Processes a CSV file containing input data, generates predictions for each row,
     and writes the predictions to an output CSV file.
 
     The function performs the following steps:
@@ -342,19 +342,47 @@ def predict_all(csv_file_path):
         list: A list of predictions for each row in the input CSV file.
     """
     try:
-        df_test = pd.read_csv(csv_file_path, keep_default_na=False)
-        df_test.columns = ["ID", "P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8"]
+        # Read CSV, automatically detecting header. Keep default NA values for now.
+        # Use keep_default_na=False to treat empty strings as strings, not NaN initially
+        df = pd.read_csv(csv_file_path, keep_default_na=False)
     except FileNotFoundError:
-        print(f"Error: Test CSV file not found at {csv_file_path}")
+        print(f"Error: Input CSV file not found at {csv_file_path}", file=sys.stderr)
         sys.exit(1)
-    
-    data_fets = preprocess_data(df_test)
+    except Exception as e:
+        print(f"Error reading CSV file: {e}", file=sys.stderr)
+        sys.exit(1)
+
+    # --- Column Renaming ---
+    # Assume the features P1-P8 (or Q1-Q8) are always in columns 1 through 8 (0-indexed)
+    if df.shape[1] < 9:
+        print(f"Error: CSV file has fewer than 9 columns ({df.shape[1]}). Expected at least ID + 8 features.", file=sys.stderr)
+        sys.exit(1)
+
+    # Get the names of the columns that *should* contain the features
+    original_feature_cols = df.columns[1:9]
+
+    # Define the target names used internally by preprocess_data
+    target_feature_names = ["P1", "P2", "P3", "P4", "P5", "P6", "P7", "P8"]
+
+    # Create the renaming dictionary
+    rename_map = dict(zip(original_feature_cols, target_feature_names))
+
+    # Rename the columns in the DataFrame
+    try:
+        df.rename(columns=rename_map, inplace=True)
+    except Exception as e:
+        print(f"Error renaming columns: {e}", file=sys.stderr)
+        print("Original columns:", df.columns, file=sys.stderr)
+        print("Rename map:", rename_map, file=sys.stderr)
+        sys.exit(1)
+
+    data_fets = preprocess_data(df)
     results = []
     for i in data_fets:
         x = predict(i)
         if x[0] == 1.0:
             results.append("Pizza")
-        elif x[1] == 1.0:   
+        elif x[1] == 1.0:
             results.append("Shawarma")
         elif x[2] == 1.0:
             results.append("Sushi")

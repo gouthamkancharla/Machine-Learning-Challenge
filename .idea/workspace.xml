@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76923bc7-5d38-4d38-8a26-6286ebe0e5c1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/gradient_boosting.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/explore_models.sh" beforeDir="false" afterPath="$PROJECT_DIR$/explore_models.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_exploration/gmm.py" beforeDir="false" afterPath="$PROJECT_DIR$/unused/gmm.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/model_exploration/kmeans.py" beforeDir="false" afterPath="$PROJECT_DIR$/unused/kmeans.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_models_output.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pred.py" beforeDir="false" afterPath="$PROJECT_DIR$/pred.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,14 +61,24 @@
     "Python.radius.executor": "Run",
     "Python.random_forest.executor": "Run",
     "Python.rnn.executor": "Run",
+    "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "Shell Script.explore_models.sh.executor": "Run",
     "git-widget-placeholder": "development",
     "last_opened_file_path": "/Users/goutham/Desktop/Machine-Learning-Challenge",
     "settings.editor.selected.configurable": "configurable.group.language"
+  },
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "TEXT"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/unused" />
       <recent name="$PROJECT_DIR$/model_exploration/neural_network" />
